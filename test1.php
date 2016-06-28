@@ -17,10 +17,26 @@
             }
             public function moveTo($x, $y)
             {
-                
+                $this->position['x'] =$x;
+                $this->position['y'] =$y;
+                return $this->position;
+            }
+            public function resetPosition()
+            {
+                $this->moveTo(0,0);
+                return $this->position;
             }
         }
         
+        $spt = new Cat("kitty");
+        
+        echo $spt->name;
+        echo "<br>";
+        $spt->name = "Hello Kitty";
+        echo $spt->name;
+        echo "<br>";
+        echo "(".$pet->position['x'].",".$pet->position['y'].")";
+        echo "<br>";
         ?>
     </body>
 </html>
